@@ -73,6 +73,39 @@ person.increaseAge();
 console.log(person.age); // Output: 31
 ```
 <br>
-<br>
 <h2>How does middleware differ from an API gateway?</h2>
 <br>
+<li><b>Middleware</b> is a function or series of function that sits in between incoming request and outgoing response in application req-res cycle.</li>
+<li><b>API gateway</b> is a specific type of middleware that designed to expose and manage APIs.</li>
+<br>
+In general, middleware is more general-purpose than API gateway. It can be used for a wider range of tasks, but it may not be as optimized for specific tasks such as API management. API gateway, on the other hand, is specifically designed for API management, so it typically offers more features and capabilities in this area.
+<br>
+<thead>
+<tr>
+<td>Feature</td>
+<td>Middleware</td>
+<td>API Gateway</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose</td>
+<td>Connects different systems and applications</td>
+<td>Exposes API to external clients</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>as a single piece of software or as collection of modules.</td>
+<td>as a single piece of software.</td>
+</tr>
+<tr>
+<td>Features</td>
+<td>Data integration, security, performance optimization</td>
+<td>Authentication, authorization, rate limiting, load balancing</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>General-purpose</td>
+<td>API management</td>
+</tr>
+</tbody>
