@@ -80,6 +80,7 @@ console.log(person.age); // Output: 31
 <br>
 In general, middleware is more general-purpose than API gateway. It can be used for a wider range of tasks, but it may not be as optimized for specific tasks such as API management. API gateway, on the other hand, is specifically designed for API management, so it typically offers more features and capabilities in this area.
 <br>
+<table>
 <thead>
 <tr>
 <td>Feature</td>
@@ -109,3 +110,4 @@ In general, middleware is more general-purpose than API gateway. It can be used 
 <td>API management</td>
 </tr>
 </tbody>
+</table>
