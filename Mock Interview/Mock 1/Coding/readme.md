@@ -197,4 +197,8 @@ const commentSchema = new mongoose.Schema({
 
 <br>
 
-<h2></h2>
+<h2>What is a RESTful API?</h2>
+
+<h2>What is the React lifecycle?</h2>
+
+<h2>how can you use the useEffect hook to clean up resources or subscription when a component unmounts?</h2>
