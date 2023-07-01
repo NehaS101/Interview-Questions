@@ -45,20 +45,22 @@ By using the call() or apply() methods, you can explicitly set the value of this
 
 Yes, an object method in JavaScript can access and modify the object's properties. When a method is defined within an object, it has access to the object's properties through the this keyword. <br>The this keyword refers to the current instance of the object, allowing the method to access and modify the object's properties.
 <br>
-const person = {<br>
-  firstName: 'John',<br>
-  lastName: 'Doe',<br>
-  age: 30,<br>
-  greet: function() {<br>
-    console.log(`Hello, ${this.firstName} ${this.lastName}!`);<br>
-  },<br>
-  increaseAge: function() {<br>
-    this.age++;<br>
-  }<br>
-};<br>
+```js
+const person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 30,
+  greet: function() {
+    console.log(`Hello, ${this.firstName} ${this.lastName}!`);
+  },
+  increaseAge: function() {
+    this.age++;
+  }
+};
 
-person.greet(); // Output: Hello, John Doe!<br>
+person.greet(); // Output: Hello, John Doe!
 console.log(person.age); // Output: 30
-<br>
-person.increaseAge();<br>
-console.log(person.age); // Output: 31<br>
+person.increaseAge();
+console.log(person.age); // Output: 31
+```
+<h2>How does middleware differ from an API gateway?</h2>
