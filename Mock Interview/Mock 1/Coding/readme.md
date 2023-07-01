@@ -44,9 +44,10 @@ const obj = {
 greet.call(obj);  // using call() to explicitly set 'this' to 'obj'
 ```
 By using the call() or apply() methods, you can explicitly set the value of this. In this example, greet.call(obj) sets this inside the greet function to obj, allowing this.name to access the name property of obj.
-
+<br>
+<br>
 <h2>Can an object method access and modify the object's properties in javascript?</h2>
-
+<br>
 Yes, an object method in JavaScript can access and modify the object's properties. When a method is defined within an object, it has access to the object's properties through the this keyword. <br>The this keyword refers to the current instance of the object, allowing the method to access and modify the object's properties.
 <br>
 
@@ -68,4 +69,7 @@ console.log(person.age); // Output: 30
 person.increaseAge();
 console.log(person.age); // Output: 31
 ```
+<br>
+<br>
 <h2>How does middleware differ from an API gateway?</h2>
+<br>
