@@ -6,45 +6,50 @@ To understand the relationship between this and lexical scope, let's consider so
 <br>
 <br>
 Example 1: Global Scope
-console.log(this);
 
+```js
+console.log(this);
+```
 In the global scope, outside of any function, this refers to the global object. However, when using strict mode ('use strict';), this will be undefined.
 
 Example 2: Object Method
-
-const obj = {<br>
-  name: 'John',<br>
-  greet: function() {<br>
-    console.log(`Hello, ${this.name}!`);<br>
+```js
+const obj = {
+  name: 'John',
+  greet: function() {
+    console.log(`Hello, ${this.name}!`);
   }
 };
 
 obj.greet();   // 'this' refers to the 'obj' object, so 'this.name' refers to 'obj.name'
-
-Example 3: Constructor Function<br>
-function Person(name) {<br>
-  this.name = name;<br>
-}<br>
-const john = new Person('John');<br>
+```
+Example 3: Constructor Function
+```js
+function Person(name) {
+  this.name = name;
+}
+const john = new Person('John');
 console.log(john.name);  // 'this' refers to the newly created object 'john'
-
+```
 When a function is used as a constructor with the new keyword, this refers to the newly created object. In this example, this.name sets the name property of the newly created Person object.
 
 Example 4: Explicitly Setting this<br>
-function greet() {<br>
-  console.log(`Hello, ${this.name}!`);<br>
-}<br>
-const obj = {<br>
-  name: 'John'<br>
-};<br>
+```js
+function greet() {
+  console.log(`Hello, ${this.name}!`);
+}
+const obj = {
+  name: 'John'
+};
 greet.call(obj);  // using call() to explicitly set 'this' to 'obj'
-
+```
 By using the call() or apply() methods, you can explicitly set the value of this. In this example, greet.call(obj) sets this inside the greet function to obj, allowing this.name to access the name property of obj.
 
 <h2>Can an object method access and modify the object's properties in javascript?</h2>
 
 Yes, an object method in JavaScript can access and modify the object's properties. When a method is defined within an object, it has access to the object's properties through the this keyword. <br>The this keyword refers to the current instance of the object, allowing the method to access and modify the object's properties.
 <br>
+
 ```js
 const person = {
   firstName: 'John',
