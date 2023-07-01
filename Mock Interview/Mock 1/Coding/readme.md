@@ -130,3 +130,29 @@ res.status(500).send("mongodb error")
 }
 
 ```
+
+<br>
+
+<h2>Write code that uses middleware to implement rate limiting in an API?</h2>
+<br>
+
+```js
+const express = require('express');
+const RateLimit = require('express-rate-limit');
+
+const app = express();
+
+// Create a rate limiter middleware
+const limiter = new RateLimit({
+  windowMs: 60 * 1000, // 1 minute window
+  max: 100, // Maximum 100 requests per window
+  message: 'Too many requests, please try again later.',
+});
+
+// Apply the rate limiter middleware to all routes
+app.use(limiter);
+```
+
+<br>
+
+<h2>Implement embedded relationship in node.js and mongodb using a blog post and comments so that you can create a new posts document with comments write the schema?</h2>
