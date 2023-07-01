@@ -1,4 +1,5 @@
 <h2>How does the this keyword relate to lexical scope in javascript?</h2>
+<br>
 The this keyword in JavaScript refers to the current execution context. In lexical scope, the execution context is determined by the function that is currently being executed. <br>
 This means that the this keyword will always refer to the object that created the function.
 <br>
@@ -46,9 +47,11 @@ greet.call(obj);  // using call() to explicitly set 'this' to 'obj'
 By using the call() or apply() methods, you can explicitly set the value of this. In this example, greet.call(obj) sets this inside the greet function to obj, allowing this.name to access the name property of obj.
 <br>
 <br>
+
 <h2>Can an object method access and modify the object's properties in javascript?</h2>
 <br>
 Yes, an object method in JavaScript can access and modify the object's properties. When a method is defined within an object, it has access to the object's properties through the this keyword. <br>The this keyword refers to the current instance of the object, allowing the method to access and modify the object's properties.
+
 <br>
 
 ```js
