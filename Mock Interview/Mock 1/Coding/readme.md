@@ -83,29 +83,29 @@ In general, middleware is more general-purpose than API gateway. It can be used 
 <table>
 <thead>
 <tr>
-<td>Feature</td>
+<td><b>Feature</b></td>
 <td>Middleware</td>
 <td>API Gateway</td>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Purpose</td>
+<td><b>Purpose</b></td>
 <td>Connects different systems and applications</td>
 <td>Exposes API to external clients</td>
 </tr>
 <tr>
-<td>Implementation</td>
+<td><b>Implementation</b></td>
 <td>as a single piece of software or as collection of modules.</td>
 <td>as a single piece of software.</td>
 </tr>
 <tr>
-<td>Features</td>
+<td><b>Features</b></td>
 <td>Data integration, security, performance optimization</td>
 <td>Authentication, authorization, rate limiting, load balancing</td>
 </tr>
 <tr>
-<td>Optimization</td>
+<td><b>Optimization</b></td>
 <td>General-purpose</td>
 <td>API management</td>
 </tr>
@@ -156,3 +156,45 @@ app.use(limiter);
 <br>
 
 <h2>Implement embedded relationship in node.js and mongodb using a blog post and comments so that you can create a new posts document with comments write the schema?</h2>
+<br>
+
+```js
+const mongoose = require('mongoose');
+
+const postSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true
+  },
+  content: {
+    type: String,
+    required: true
+  },
+  comments: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Comment'
+  }]
+});
+
+const Post = mongoose.model('Post', postSchema);
+
+module.exports = Post;
+
+
+const mongoose = require('mongoose');
+
+const commentSchema = new mongoose.Schema({
+  text: {
+    type: String,
+    required: true
+  },
+  post: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Post'
+  }
+});
+```
+
+<br>
+
+<h2></h2>
