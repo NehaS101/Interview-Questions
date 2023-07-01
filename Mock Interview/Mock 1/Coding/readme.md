@@ -111,3 +111,22 @@ In general, middleware is more general-purpose than API gateway. It can be used 
 </tr>
 </tbody>
 </table>
+
+<br>
+
+<h2>Create a error handling middleware function</h2>
+<br>
+
+```js
+const errorHandle=(err,req,res,next) => {
+console.log(err);
+if(err instanceof SyntaxError) {
+res.status(404).send("Invalid request syntax")
+}else if(err instanceof MongoDBError) {
+res.status(500).send("mongodb error")
+}else{
+    res.status(500).send("Internal Server Error")
+}
+}
+
+```
