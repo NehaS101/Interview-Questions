@@ -200,6 +200,12 @@ const commentSchema = new mongoose.Schema({
 <h2>What is a RESTful API?</h2>
 <br>
 
+
+<br>
+
+<h2>What is the React lifecycle?</h2>
+<br>
+
 In React, the component lifecycle refers to the series of events or methods that are invoked at different stages of a component's existence. These lifecycle methods allow you to perform actions and manage the behavior of components during various phases, such as component creation, rendering, updating, and removal.
 <br>
 React has had two main versions: class components (React Class Lifecycle) and functional components with hooks (React Function Lifecycle). I'll provide an overview of both lifecycles:
@@ -220,6 +226,31 @@ With functional components, hooks provide a more concise and flexible way to man
 
 <br>
 
-<h2>What is the React lifecycle?</h2>
-
 <h2>how can you use the useEffect hook to clean up resources or subscription when a component unmounts?</h2>
+<br>
+In React, the useEffect hook can be used to perform cleanup operations when a component unmounts. You can specify a cleanup function within the useEffect hook, and React will invoke that function when the component is about to be unmounted.
+<br>
+
+```js
+import React, { useEffect } from 'react';
+
+const MyComponent = () => {
+  useEffect(() => {
+    // Perform setup or subscription
+    const subscription = subscribeToData();
+
+    // Specify the cleanup function
+    return () => {
+      // Perform cleanup or unsubscribe here
+      unsubscribeFromData(subscription);
+    };
+  }, []); // Empty dependency array to ensure the effect runs only once during mounting
+
+  // Rest of your component logic
+
+  return <div>My Component</div>;
+};
+
+export default MyComponent;
+```
+<br>
