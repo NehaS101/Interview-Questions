@@ -198,6 +198,27 @@ const commentSchema = new mongoose.Schema({
 <br>
 
 <h2>What is a RESTful API?</h2>
+<br>
+
+In React, the component lifecycle refers to the series of events or methods that are invoked at different stages of a component's existence. These lifecycle methods allow you to perform actions and manage the behavior of components during various phases, such as component creation, rendering, updating, and removal.
+<br>
+React has had two main versions: class components (React Class Lifecycle) and functional components with hooks (React Function Lifecycle). I'll provide an overview of both lifecycles:
+<br>
+React Class Lifecycle (for class components):<br>
+The lifecycle methods in class components include:<br>
+
+<li>Mounting Phase:</li>
+<li>Updating Phase:</li>
+<li>Unmounting Phase:</li>
+<li>Error Handling:</li>
+
+React Function Lifecycle (with hooks):
+With functional components, hooks provide a more concise and flexible way to manage component lifecycle. Key hooks include:
+<br>
+<li>useState(): Manages state within functional components.</li>
+<li>useEffect(): Replaces various lifecycle methods, such as componentDidMount</li>
+
+<br>
 
 <h2>What is the React lifecycle?</h2>
 
